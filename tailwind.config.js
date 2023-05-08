@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class', 
+  
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -7,6 +9,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        burtons:'burtons', 
+        heebo: 'heebo',
+        vina: 'vina', 
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
