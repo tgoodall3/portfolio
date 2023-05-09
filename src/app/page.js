@@ -5,6 +5,11 @@ import {BsFillMoonStarsFill} from 'react-icons/bs';
 import {AiFillTwitterCircle, AiFillLinkedin, AiFillYoutube} from 'react-icons/ai'
 import avatar from '../../public/images/avatar.png'
 import { useState } from 'react';
+import { VscVm } from "react-icons/vsc";
+import { SiAdobeillustrator, SiAdobephotoshop, SiAdobexd, SiAdobelightroom } from "react-icons/si";
+import { SlMouse } from "react-icons/sl";
+import Modal from '../../components/modal';
+import Resume from '../../public/images/resume.jpg'
 
 export default function Home() {
     const [darkMode, SetDarkMode] = useState(false);
@@ -18,7 +23,9 @@ export default function Home() {
         <h1 className='mt-5 text-2xl font-burtons text-violet-800 dark:text-violet-400'>DevelopedByTyler</h1>
         <ul className='flex items-center'>
           <li><BsFillMoonStarsFill onClick={() => SetDarkMode(!darkMode)} className='cursor-pointer text-xl font-burtons dark:text-white  '/></li>
-          <li><a className=' bg-gradient-to-r from-violet-800 to-violet-400 px-5 py-2 rounded-md ml-8 text-fuchsia-50 drop-shadow-xl' href='#'>Resume</a></li>
+          <Modal trigger={<li><a className=' bg-gradient-to-r from-violet-800 to-violet-400 px-5 py-2 rounded-md ml-8 text-fuchsia-50 drop-shadow-xl' href='#'>Resume</a></li>}>
+            {/* <Resume/> */}
+          </Modal>
         </ul>
       </nav>
       <div className='text-center p-10'>
@@ -36,10 +43,24 @@ export default function Home() {
       </div>
     </section>
 
-    <section className='p-5 px-20 flex justify-center bg-violet-400 dark:bg-violet-800'>
+    <section className='p-5 px-20 bg-violet-400 dark:bg-violet-800'>
       <div className=''>
         <h3 className='font-vina text-white text-3xl font-md mt-20 tracking-wide '>What I specialize in!</h3>
         <p className='font-semibold text-lg dark:text-violet-200'>During my time in college, I've spent most my time learning html, css, and js. I've also worked with Firebase and SQL. Ive more recently dived into React and working making CRUD applications. My passion has continued to grow and I use my free time perfecting my craft.</p>
+        <div className='flex justify-center ' >
+        <VscVm className='h-20 w-20 text-white'/>
+        <SlMouse className='h-20 w-20 text-white'/>
+        </div>
+      </div>
+      <div className=''>
+        <h3 className='font-vina text-white text-3xl font-md mt-20 tracking-wide '>Also..</h3>
+        <p className='font-semibold text-lg dark:text-violet-200'>I also have experience using PS, Illustrator, Lightroom, and XD. I have a good understanding of design principles and how to create breath taking designs!</p>
+       <div className='flex justify-evenly flex-wrap'>
+       <SiAdobeillustrator className='h-20 w-20 text-white'/>
+        <SiAdobephotoshop className='h-20 w-20 text-white'/>
+        <SiAdobelightroom className='h-20 w-20 text-white'/>
+        <SiAdobexd className='h-20 w-20 text-white'/>
+       </div>
       </div>
     </section>
     </main>
