@@ -24,8 +24,7 @@ export default function Modal({children, trigger}) {
         { isOpen ? (
             <div onClick={closeModal} className={modalStyles.modal}>
             <button className={modalStyles.close} onClick={closeModal}>x</button>
-            {/* <div>{children}</div> */}
-            <img className='h-90 w-80' src='../public/images/resume.jpg'/>
+            <div>{children}</div>
         </div>
 
         ) : (

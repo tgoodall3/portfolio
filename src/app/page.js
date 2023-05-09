@@ -24,7 +24,7 @@ export default function Home() {
         <ul className='flex items-center'>
           <li><BsFillMoonStarsFill onClick={() => SetDarkMode(!darkMode)} className='cursor-pointer text-xl font-burtons dark:text-white  '/></li>
           <Modal trigger={<li><a className=' bg-gradient-to-r from-violet-800 to-violet-400 px-5 py-2 rounded-md ml-8 text-fuchsia-50 drop-shadow-xl' href='#'>Resume</a></li>}>
-            {/* <Resume/> */}
+          {/* <Image src={Resume} layout='fill' object-objectFit='cover' className=' flex w-80 h-80'/> */}
           </Modal>
         </ul>
       </nav>
