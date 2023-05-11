@@ -1,6 +1,7 @@
 import React from 'react';
 import modalStyles from '../styles/modal.module.css';
 import Resume from '../public/images/resume.jpg'
+import Image from 'next/image'
 
 
 export default function Modal({children, trigger}) {
@@ -22,10 +23,12 @@ export default function Modal({children, trigger}) {
         <>
         <div onClick={openModal} className={modalStyles.trigger}>{trigger}</div>
         { isOpen ? (
-            <div onClick={closeModal} className={modalStyles.modal}>
+          <div className='w-screen h-screen'>
+              <div onClick={closeModal} className={modalStyles.modal}>
             <button className={modalStyles.close} onClick={closeModal}>x</button>
-            <div>{children}</div>
+            <div className='overscroll-contain'>{children}</div>
         </div>
+          </div>
 
         ) : (
             <></>
