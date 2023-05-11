@@ -64,7 +64,7 @@ export default function Home() {
       <AiFillYoutube className='cursor-pointer'/>
       </div>
       <div className='relative bg-gradient-to-b from-violet-400 to-white rounded-full w-80 h-80 mt-10 mb-10 mx-auto overflow-hidden'>
-        <Image className='' src={avatar} layout='fill' object-objectFit='cover' />
+        <Image alt='avatar' className='' src={avatar} layout='fill' object-objectFit='cover' />
       </div>
     </section>
 
